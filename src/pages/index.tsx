@@ -1,5 +1,6 @@
 import { Profiler } from 'react'
 import {
+  ChallengeBox,
   CompletedChallenges,
   Countdown,
   ExperienceBar,
@@ -27,7 +28,7 @@ export default function Home() {
           <Countdown />
         </div>
         <div>
-
+          <ChallengeBox />
         </div>
       </section>
   </div>
