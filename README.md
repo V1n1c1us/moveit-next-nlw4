@@ -9,17 +9,13 @@
 
 
 
-## :rocket: Technologies
+## 🛠 Technologies used
 
-This project was developed with the following technologies:
+The following tools were used in the construction of the project:
 
-<!---  [Styled-components](https://www.styled-components.com/) -->
-- Javascript
-- Reactjs
-- Nextjs
-- ContextAPI
-- Hooks
-- Typescript
+- [ReactJS](https://pt-br.reactjs.org)
+- [NextJS](https://nextjs.org)
+- [Typescript](https://www.typescriptlang.org)
 
 ## :information_source: Credits
 :rocket: Nlw4 - Rocketseat <br>
