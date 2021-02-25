@@ -1,6 +1,6 @@
-<span align="center">
+<p align="center">
     <img alt="Covid-19 BR" src="https://github.com/V1n1c1us/moveit-next-nlw4/blob/main/public/logo-full.svg?raw=true"/>
-</span>
+</p>
 
 ## 💻 About the project
 
