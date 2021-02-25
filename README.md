@@ -15,7 +15,8 @@ This project was developed with the following technologies:
 
 <!---  [Styled-components](https://www.styled-components.com/) -->
 - Javascript
-- React
+- Reactjs
+- Nextjs
 - ContextAPI
 - Hooks
 - Typescript
