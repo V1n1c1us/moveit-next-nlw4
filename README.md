@@ -11,13 +11,34 @@
 
 
 
-## 🛠 Technologies used
+## 🧪 Technologies
 
-The following tools were used in the construction of the project:
+This project was developed using the following technologies:
 
-- [ReactJS](https://pt-br.reactjs.org)
-- [NextJS](https://nextjs.org)
-- [Typescript](https://www.typescriptlang.org)
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org)
+- [TypeScript](https://www.typescriptlang.org/)
+
+## 🔥 Preview
+
+[![Deploy with Vercel](https://vercel.com/button)](https://moveit-next-nlw4.vercel.app/)
+
+## 🚀 Getting started
+
+Clone the project and access the folder
+
+```bash
+$ git clone https://github.com/v1n1c1us/moveit-next-nlw4.git && cd moveit-next-nlw4
+```
+
+Follow the steps below
+```bash
+# Install the dependencies
+$ yarn
+
+# Start the project
+$ yarn dev
+```
 
 ## :information_source: Credits
 :rocket: Nlw4 - Rocketseat <br>
