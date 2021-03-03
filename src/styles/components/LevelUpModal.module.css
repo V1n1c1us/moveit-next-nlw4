@@ -15,11 +15,14 @@
     background: var(--white);
     width: 100%;
     max-width: 400px;
-    padding: 2rem 3rem;
     border-radius: 5px;
     box-shadow: 0 0 60px rgba(0 ,0 , 0, 0.05);
-    text-align: center;
     position: relative;
+}
+
+.levelUpModalWrapper {
+    text-align: center;
+    padding: 2rem 3rem;
 }
 
 .levelUpModalContainer header {
@@ -50,4 +53,8 @@
     border: 0;
     font-size: 0;
     cursor: pointer;
+}
+
+.twitterButton {
+    background-color: red;
 }

@@ -1,0 +1,110 @@
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: stretch;
+
+    background: var(--blue);
+}
+
+@keyframes cardEffect {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+  }
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 750px;
+
+    animation: cardEffect 1s;
+}
+
+.content > img {
+    margin-bottom: 96px;
+}
+
+.content p {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 36px;
+}
+
+.content .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content .text img {
+    margin-right: 24px;
+}
+.content .text span{
+    color: var(--texthighlight);
+    font-size: 20px;
+
+}
+
+.content .inputForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 40px;
+}
+
+.content .inputForm input {
+    height: 80px;
+    width: 340px;
+    font-size: 20px;
+    background: linear-gradient(90deg, var(--blue-dark) 0%, rgba(73, 83, 184, 0.2) 100%);
+    border: none;
+    color: var(--white);
+    text-indent: 32px;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.content .inputForm input::placeholder{
+    color: var(--texthighlight);
+}
+
+.content .inputForm button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 80px;
+    width: 80px;
+
+    background: var(--blue-dark);
+
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+
+    transition: background-color 0.2s;
+}
+
+.content .inputForm button:hover {
+    background: var(--green);
+}
+
+.content .error {
+    margin-top: 20px;
+    color: var(--error-message);
+    font-weight: 700;
+}
+
+.background {
+    flex: 1;
+    background: url('/icons/move-it.svg') no-repeat center;
+    background-size: cover;
+}

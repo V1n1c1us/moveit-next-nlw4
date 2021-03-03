@@ -1,69 +1,37 @@
-import { GetServerSideProps } from 'next';
 import Head from 'next/head';
-import React from 'react';
+import { useContext } from 'react';
 
-import {
-  ChallengeBox,
-  CompletedChallenges,
-  Countdown,
-  ExperienceBar,
-  Profile,
-} from '../components';
+import { UserAuthContext } from '../contexts/UserAuthContext';
 
-import { CountdownProvider } from '../contexts/CountdownContext';
-import { ChallengesProvider } from '../contexts/ChallengesContext';
+import styles from '../styles/pages/SingIn.module.css';
 
-import styles from '../styles/pages/Home.module.css';
+export default function SingIn() {
+  const { setUserAuth, error } = useContext(UserAuthContext);
 
-
-type HomeProps = {
-  level: number;
-  currentExperience: number;
-  challengesCompleted: number;
-}
-
-export default function Home(props: HomeProps) {
   return (
-    <ChallengesProvider
-      level={props.level}
-      currentExperience={props.currentExperience}
-      challengesCompleted={props.challengesCompleted}
-    >
-      <div className={styles.container}>
-        <Head>
-          <title>Início | move.it</title>
-        </Head>
-        <ExperienceBar />
+    <div className={styles.container}>
+      <Head>
+        <title>Início | move.it</title>
+      </Head>
+      <div className={styles.background} />
 
-       
-        <CountdownProvider>
-          <section>
-            <div>
-              <Profile />
+      <div className={styles.content}>
+        <img src="icons/logo-white.svg" className={styles.bgimage} alt="" />
 
-              <CompletedChallenges />
+        <p>Bem-vindo</p>
+        <div className={styles.text}>
+          <img src="icons/github.svg" className={styles.bgimage} alt="" />
+          <span>Faça login com seu Github para começar</span>
+        </div>
 
-              <Countdown />
-            </div>
-            <div>
-              <ChallengeBox />
-            </div>
-          </section>
-        </CountdownProvider>
+        <div className={styles.inputForm}>
+          <input type="text" name="user" placeholder="Digite seu username" required />
+          <button type="submit" onClick={setUserAuth}>
+            <img src="icons/arrow-right.svg" alt="SingIn" />
+          </button>
+        </div>
+        <span className={styles.error}>{error}</span>
+      </div>
     </div>
-  </ChallengesProvider>
-  )
-}
-
-
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const { level, currentExperience, challengesCompleted } = ctx.req.cookies;
-  
-  return {
-    props: {
-      level: Number(level),
-      currentExperience: Number(currentExperience),
-      challengesCompleted: Number(challengesCompleted),
-    }
-  }
+  );
 }
