@@ -83,18 +83,18 @@
     justify-content: center;
 
     height: 80px;
-    width: 80px;
+    width: 90px;
 
     background: var(--blue-dark);
 
     border: none;
-    border-radius: 0px 5px 5px 0px;
+    border-radius: 15%;
 
     transition: background-color 0.2s;
 }
 
 .content .inputForm button:hover {
-    background: var(--green);
+    background: var(--bunker);
 }
 
 .content .error {

@@ -1,7 +1,7 @@
-import { GetServerSideProps } from 'next';
 import Head from 'next/head';
 import React from 'react';
 
+import { useSession } from 'next-auth/client';
 import { CountdownProvider } from '../contexts/CountdownContext';
 import { ChallengesProvider } from '../contexts/ChallengesContext';
 
@@ -17,7 +17,9 @@ type HomeProps = {
   challengesCompleted: number;
 }
 
-export default function Dashboard({ level, currentExperience, challengesCompleted }: HomeProps) {
+const Dashboard = ({ level, currentExperience, challengesCompleted }: HomeProps) => {
+  const [session, loading] = useSession();
+
   return (
     <ChallengesProvider
       level={level}
@@ -31,7 +33,6 @@ export default function Dashboard({ level, currentExperience, challengesComplete
             <title>Dashboard | move.it</title>
           </Head>
           <ExperienceBar />
-
           <CountdownProvider>
             <section>
               <div>
@@ -50,16 +51,6 @@ export default function Dashboard({ level, currentExperience, challengesComplete
       </div>
     </ChallengesProvider>
   );
-}
-
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const { level, currentExperience, challengesCompleted } = ctx.req.cookies;
-
-  return {
-    props: {
-      level: Number(level),
-      currentExperience: Number(currentExperience),
-      challengesCompleted: Number(challengesCompleted),
-    },
-  };
 };
+
+export default Dashboard;
