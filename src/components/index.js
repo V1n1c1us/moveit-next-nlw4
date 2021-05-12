@@ -6,3 +6,4 @@ export { default as ChallengeBox } from './ChallengeBox';
 export { default as LevelUpModal } from './LevelUpModal';
 export { default as TwitterSharedButton } from './TwitterSharedButton';
 export { default as SideMenu } from './SideMenu';
+export { default as AdBanner } from './AdBanner';

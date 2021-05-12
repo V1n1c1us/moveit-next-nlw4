@@ -21,11 +21,9 @@ export default class MyDocument extends Document {
          <script>
               (adsbygoogle = window.adsbygoogle || []).push({});
          </script>
-              }};
-              `,
-            }}/>
-
-
+              ;
+              `}}
+            />
             </Head>
             <body>
               <Main />

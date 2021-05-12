@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { useContext } from 'react';
 
 import { UserAuthContext } from '../contexts/UserAuthContext';
+import { AdBanner } from '../components';
 
 import styles from '../styles/pages/SingIn.module.css';
 
@@ -11,7 +12,7 @@ export default function SingIn() {
 
   return (
     <div className={styles.container}>
-
+      <AdBanner />
       <Head>
         <title>Início | move.it</title>
       </Head>
