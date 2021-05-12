@@ -11,8 +11,12 @@ export default function SingIn() {
 
 
   return (
+    <>
+      <div style={{ width: 500, height: 250}}>
+        <AdBanner />
+      </div>
     <div className={styles.container}>
-      <AdBanner />
+
       <Head>
         <title>Início | move.it</title>
       </Head>
@@ -36,5 +40,6 @@ export default function SingIn() {
         <span className={styles.error}>{error}</span>
       </div>
     </div>
+    </>
   );
 }
