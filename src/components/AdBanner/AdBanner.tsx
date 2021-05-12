@@ -16,8 +16,8 @@ const AdBanner = () => {
       style={{
         display: "block"
       }}
-      data-ad-client="<your-client-id>"
-      data-ad-slot="<slot-id>"
+      data-ad-client="ca-pub-5551676193326146"
+      data-ad-slot="5190525340"
     />
   );
 };
