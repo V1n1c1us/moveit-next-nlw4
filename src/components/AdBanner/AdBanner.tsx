@@ -4,6 +4,7 @@ declare global { interface Window { adsbygoogle: any; } }
 const AdBanner = () => {
   useEffect(() => {
     console.log('window', window);
+    console.log('window.adsbygoogle', window.adsbygoogle);
     try {
       (window.adsbygoogle = window.adsbygoogle || []).push({});
     } catch (err) {
